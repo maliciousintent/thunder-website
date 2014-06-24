@@ -1,2 +1,4 @@
-*.html
-*.css
+*.DS_Store
+static/css/nib/**/*.css
+static/css/nib/**/*.html
+Thumbs.db
