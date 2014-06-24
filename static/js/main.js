@@ -14,7 +14,10 @@
     });
   };
 
-  document.querySelectorAll('button.signup').on('click', function () {
+  var showSignup;
+  var hideSignup;
+
+  showSignup = function () {
     document.querySelector('section#signup').style.display = 'block';
     document.querySelector('.mask-signup').style.display = 'block';
     setTimeout(function () {
@@ -22,10 +25,10 @@
       document.querySelector('section#signup').classList.add('visible');
       document.querySelector('.mask-signup').classList.add('visible');
       document.querySelector('section#signup button.close').classList.add('visible');
-    }, 10);
-  });
+    }, 100);
+  };
 
-  document.querySelectorAll('button.close').on('click', function () {
+  hideSignup = function () {
     document.querySelector('section#landing').classList.remove('hidden');
     document.querySelector('section#signup').classList.remove('visible');
     document.querySelector('.mask-signup').classList.remove('visible');
@@ -33,7 +36,17 @@
     setTimeout(function () {
       document.querySelector('section#signup').style.display = 'none';
       document.querySelector('.mask-signup').style.display = 'none';
+      document.querySelector('section#signup input#email').value = '';
     }, 500);
-  });
+  }
+
+  document.querySelectorAll('button.signup').on('click', showSignup);
+  document.querySelectorAll('button.close').on('click', hideSignup);
+  document.querySelector('section#signup form').addEventListener('submit', hideSignup);
+
+  setTimeout(function () {
+    document.querySelector('section#landing .image').classList.add('showed');
+    document.querySelector('section#landing .claim').classList.add('showed');
+  }, 100);
 
 })();
