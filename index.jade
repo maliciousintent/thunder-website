@@ -1,0 +1,58 @@
+extends layout
+
+block title
+  | Thunder Campaigns - Crowdfunding Intelligence
+
+//-block links
+
+block app
+  section.page#landing
+    .container
+      header
+        .pull-right
+          button.pure-button.signup
+            span Signup
+        img.logo(src='static/img/thunder-logo.png')
+      
+      .claim
+
+        .spacer-80
+        h1
+          span Speed up your
+          br
+          strong Crowdfunding
+          br
+          strong Campaign
+        .spacer
+        p
+          | We provide you with deep insights into how to perfectly structure your crowdfunding campaign, based on the 
+          strong big data analysis 
+          | of the most successful and unsuccessful crowdfunding campaigns.
+        .spacer-20
+        button.pure-button.signup
+          span Signup
+
+      .image
+        img(src='static/img/thunder-intro-image.png')
+  
+  .mask-signup
+  section#signup
+    .container
+      form.pure-form(action='http://thundercampaign.us8.list-manage.com/subscribe/post?u=d99c1755656dbf46edde51bcf&amp;id=14e385202c', method='post', name='mc-embedded-subscribe-form', target='_blank')
+        h1
+          strong Sign up
+          br
+          span for an early invite
+        .spacer-10
+
+        input(type='email', name='EMAIL', placeholder='E-mail address', required)
+        input(type='hidden' name='b_d99c1755656dbf46edde51bcf_14e385202c' tabindex='-1' value='')
+        button.pure-button(type='submit')
+          i.icon-paper-plane 
+          span Sign up
+        button.pure-button.close(type='button')
+          i.icon-cancel
+          span close
+        .spacer-20
+
+//-block scripts
