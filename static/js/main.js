@@ -43,6 +43,7 @@
   document.querySelectorAll('button.signup').on('click', showSignup);
   document.querySelectorAll('button.close').on('click', hideSignup);
   document.querySelector('section#signup form').addEventListener('submit', hideSignup);
+  document.querySelector('.mask-signup').addEventListener('click', hideSignup);
 
   setTimeout(function () {
     document.querySelector('section#landing .image').classList.add('showed');
