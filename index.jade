@@ -6,35 +6,83 @@ block title
 //-block links
 
 block app
-  section.page#landing
-    .container
-      header
-        .pull-right
-          button.pure-button.signup
-            span Signup
-        img.logo(src='static/img/thunder-logo.png')
-      
-      .claim
+  #app
+    section.page#landing
+      .container
+        header
+          .pull-right
+            button.pure-button.signup
+              span Signup
+          img.logo(src='static/img/thunder-logo.png')
+        
+        .claim
 
-        .spacer-80
-        h1
-          span Speed up your
-          br
-          strong Crowdfunding
-          br
-          strong Campaign
-        .spacer
-        p
-          | We provide you with deep insights into how to perfectly structure your crowdfunding campaign, based on the 
-          strong big data analysis 
-          | of the most successful and unsuccessful crowdfunding campaigns.
-        .spacer-20
-        button.pure-button.signup
-          span Signup
+          .spacer-80
+          h1
+            span Speed up your
+            br
+            strong Crowdfunding
+            br
+            strong Campaign
+          .spacer
+          p
+            | We provide you with deep insights into how to perfectly structure your crowdfunding campaign, based on the 
+            strong big data analysis 
+            | of the most successful and unsuccessful crowdfunding campaigns.
+          .spacer-20
+          .buttons
+            button.pure-button.signup
+              span Signup
+            | &nbsp;&nbsp;&nbsp;
+            a.pure-button(href='#meet')
+              span Meet the team
 
-      .image
-        img(src='static/img/thunder-intro-image.png')
+        .image
+          img(src='static/img/thunder-intro-image.png')
+
+
+    section.page.page-white#meet
+      a(name='meet')
+      .container
+        .spacer-150
+        .pure-g
+          .pure-u-1-4
+            .profile
+              img(src='static/img/thundercampaign-team-frank-manuel-saviane.png')
+              h3 Frank M. Saviane
+              h4 CEO
+          .pure-u-1-4
+            .profile
+              img(src='static/img/thundercampaign-team-andrea-colognese.png')
+              h3 Andrea Colognese
+              h4 COO
+          .pure-u-1-4
+            .profile
+              img(src='static/img/thundercampaign-team-mauro-bolis.png')
+              h3 Mauro Bolis
+              h4 CTO, Lead Back-end
+          .pure-u-1-4
+            .profile
+              img(src='static/img/thundercampaign-team-emanuele-brivio.png')
+              h3 Emanuele Brivio
+              h4 Lead Front-end
+        .spacer-60
   
+    section.page.page-white#footer
+      .container
+        .pure-g
+          .pure-u-1-2
+            p
+              img.sponsor(src='static/img/thundercampaign-partner-thunder.png')
+              span Copyright 2014 &copy;
+              a.link(href='//www.iubenda.com/privacy-policy/955835', target='_blank') Privacy Policy
+          .pure-u-1-2.text-right
+            p
+              img.sponsor(src='static/img/thundercampaign-partner-fastforward-advisors.png')
+              img.sponsor(src='static/img/thundercampaign-partner-plasticpanda.png')
+        script.
+          (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+    
   .mask-signup
   section#signup
     .container

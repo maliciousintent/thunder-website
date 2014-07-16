@@ -21,7 +21,7 @@
     document.querySelector('section#signup').style.display = 'block';
     document.querySelector('.mask-signup').style.display = 'block';
     setTimeout(function () {
-      document.querySelector('section#landing').classList.add('hidden');
+      document.querySelector('#app').classList.add('hidden');
       document.querySelector('section#signup').classList.add('visible');
       document.querySelector('.mask-signup').classList.add('visible');
       document.querySelector('section#signup button.close').classList.add('visible');
@@ -29,7 +29,7 @@
   };
 
   hideSignup = function () {
-    document.querySelector('section#landing').classList.remove('hidden');
+    document.querySelector('#app').classList.remove('hidden');
     document.querySelector('section#signup').classList.remove('visible');
     document.querySelector('.mask-signup').classList.remove('visible');
     document.querySelector('section#signup button.close').classList.remove('visible');
@@ -46,8 +46,18 @@
   document.querySelector('.mask-signup').addEventListener('click', hideSignup);
 
   setTimeout(function () {
-    document.querySelector('section#landing .image').classList.add('showed');
-    document.querySelector('section#landing .claim').classList.add('showed');
+    document.querySelector('#app .image').classList.add('showed');
+    document.querySelector('#app .claim').classList.add('showed');
   }, 100);
+
+
+  var resizeHandler = function () {
+    document.querySelector('section#landing').style.height = document.querySelector('body').getBoundingClientRect().height + 'px';
+  };
+
+  window.addEventListener('resize', function () {
+    resizeHandler();
+  });
+  resizeHandler();
 
 })();
