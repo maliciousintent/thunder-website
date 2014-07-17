@@ -38,7 +38,22 @@ block app
               span Meet the team
 
         .image
-          img(src='static/img/thunder-intro-image.png')
+          .bar-container.pure-g
+            .pure-u-1-6
+              #bar-0
+            .pure-u-1-6
+              #bar-1
+            .pure-u-1-6
+              #bar-2
+            .pure-u-1-6
+              #bar-3
+            .pure-u-1-6
+              #bar-4
+            .pure-u-1-6
+              #bar-5
+          .bar-container.pure-g
+            .pure-u-1
+              #top-projects
 
 
     section.page.page-white#meet
@@ -103,4 +118,48 @@ block app
           span close
         .spacer-20
 
-//-block scripts
+  pre#tsv(style='display:none').
+    Browser Version##Total Market Share
+    Microsoft Internet Explorer gadget##2661
+    Microsoft Internet Explorer gadget##1696
+    Microsoft Internet Explorer gadget##1009
+    Microsoft Internet Explorer intangible##640
+    Microsoft Internet Explorer intangible##355
+    Firefox 12##672
+    Firefox 11##472
+    Firefox 13##216
+    Firefox 3.6##187
+    Firefox 10##2090
+    Firefox 9.0##1065
+    Firefox 8.0##2055
+    Firefox 4.0##3050
+    Firefox 3.0##4036
+    Firefox 3.5##5036
+    Firefox 6.0##5032
+    Firefox 5.0##5031
+    Firefox 7.0##5029
+    Firefox 14##5010
+    Firefox 2.0##5009
+    Safari 5.1##353
+    Chrome 18.0##801
+    Chrome 19.0##773
+    Chrome 17.0##113
+    Chrome 16.0##1045
+    Chrome 14.0##1025
+    Chrome 20.0##1024
+    Chrome 15.0##1018
+    Chrome 12.0##1016
+    Chrome 11.0##1010
+    Chrome 18.0##1026
+    Chrome 13.0##1013
+    Chrome 10.0##1009
+    Safari 5.0##1085
+    Safari 4.1##1012
+    Safari 4.0##1014  
+
+block scripts
+  script(src='http://code.jquery.com/jquery-1.11.1.min.js')
+  script(src='http://code.highcharts.com/highcharts.js')
+  script(src='http://code.highcharts.com/modules/data.js')
+  script(src='http://code.highcharts.com/modules/drilldown.js')
+  script(src='static/js/charts.js')
