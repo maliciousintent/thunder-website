@@ -7,159 +7,131 @@ block title
 
 block app
   #app
-    section.page#landing
+    section.page.page-texture#landing
       .container
         header
           .pull-right
-            button.pure-button.signup
-              span Signup
-          img.logo(src='static/img/thunder-logo.png')
-        
-        .claim
+            ul#menu
+              li: a(href='#discover') Discover More
+              //-li: a(href='#preview') Get a Preview
+              li: a(href='#meet') Meet the team
+              li: button.pure-button.signup
+                span Signup
 
-          .spacer-80
+          img.logo(src='static/img/thunder-logo-white.png')
+        
+        #claim.fixed-container.text-center
+          .spacer-100
           h1
-            span Speed up your
-            br
-            strong Crowdfunding
-            br
-            strong Campaign
-          .spacer
+            | Speed up your 
+            strong Crowdfunding Campaign
+          .spacer-40
           p
-            | We provide you with deep insights into how to perfectly structure your crowdfunding campaign, based on the 
+            | We provide you with deep insights into how to perfectly structure your crowdfunding campaign, based on 
+            br.to-hide
+            | the 
             strong big data analysis 
             | of the most successful and unsuccessful crowdfunding campaigns.
-          .spacer-20
-          .buttons
-            button.pure-button.signup
+          .spacer-40
+          p
+            button.pure-button.pure-button-rounded.signup
+              i.icon-vcard
               span Signup
-            | &nbsp;&nbsp;&nbsp;
-            a.pure-button(href='#meet')
-              span Meet the team
+            | or&nbsp;&nbsp;&nbsp;
+            a.link(href='#meet')
+              span See what you get with Thunder Campaign »
+          .spacer-150
 
-        .image
-          .bar-container.pure-g
-            .pure-u-1-6
-              #bar-0
-            .pure-u-1-6
-              #bar-1
-            .pure-u-1-6
-              #bar-2
-            .pure-u-1-6
-              #bar-3
-            .pure-u-1-6
-              #bar-4
-            .pure-u-1-6
-              #bar-5
-          .bar-container.pure-g
-            .pure-u-1
-              #top-projects
+    section.page.page-white#dashboard
+      .preview.text-center
+        img(src='static/img/dashboard-preview-stats.png')#discover
+      .spacer-100
 
+    section.page.page-texture#recall
+      .container
+        .text-center
+          p
+            button.pure-button.pure-button-rounded.signup
+              i.icon-vcard
+              span Signup
+            //-| to get a preview of Thunder Campaign
+            | to keep updated! We will notify you at the launch of the Beta
 
     section.page.page-white#meet
-      a(name='meet')
-      .container
-        .spacer-150
-        .pure-g
-          .pure-u-1-4
-            .profile
-              img(src='static/img/thundercampaign-team-frank-manuel-saviane.png')
-              h3 Frank M. Saviane
-              h4 CEO
-          .pure-u-1-4
-            .profile
-              img(src='static/img/thundercampaign-team-andrea-colognese.png')
-              h3 Andrea Colognese
-              h4 COO
-          .pure-u-1-4
-            .profile
-              img(src='static/img/thundercampaign-team-mauro-bolis.png')
-              h3 Mauro Bolis
-              h4 CTO, Lead Back-end
-          .pure-u-1-4
-            .profile
-              img(src='static/img/thundercampaign-team-emanuele-brivio.png')
-              h3 Emanuele Brivio
-              h4 Lead Front-end
-        .spacer-60
+      .fixed-container
+        .spacer-100
+        .text-center
+          h1 Meet  
+            strong our team
+          .spacer-40
+          .profile
+            .profile-picture(style='background-image: url("static/img/thundercampaign-team-frank-manuel-saviane.png");')
+              img.mask(src='static/img/profile-mask.png')
+              .overlay
+                .overlay-text
+                  h3 Frank M. Saviane
+                  h4 CEO
+          .profile
+            .profile-picture(style='background-image: url("static/img/thundercampaign-team-andrea-colognese.png");')
+              img.mask(src='static/img/profile-mask-3.png')
+              .overlay
+                .overlay-text
+                  h3 Andrea Colognese
+                  h4 COO
+          .profile
+            .profile-picture(style='background-image: url("static/img/thundercampaign-team-mauro-bolis.png");')
+              img.mask(src='static/img/profile-mask.png')
+              .overlay
+                .overlay-text
+                  h3 Mauro Bolis
+                  h4 CTO, Lead Back-end
+          .profile
+            .profile-picture(style='background-image: url("static/img/thundercampaign-team-emanuele-brivio.png");')
+              img.mask(src='static/img/profile-mask-3.png')
+              .overlay
+                .overlay-text
+                  h3 Emanuele Brivio
+                  h4 Lead Front-end
+        .spacer-100
   
     section.page.page-white#footer
       .container
-        .pure-g
-          .pure-u-1-2
-            p
-              img.sponsor(src='static/img/thundercampaign-partner-thunder.png')
-              span Copyright 2014 &copy;
-              a.link(href='//www.iubenda.com/privacy-policy/955835', target='_blank') Privacy Policy
-          .pure-u-1-2.text-right
-            p
-              img.sponsor(src='static/img/thundercampaign-partner-fastforward-advisors.png')
-              img.sponsor(src='static/img/thundercampaign-partner-plasticpanda.png')
+        .pull-left
+          .spacer-10
+          .spacer-5
+          p
+            img.logo(src='static/img/thunder-logo.png')
+            span Copyright 2014 &copy;
+            a.link(href='//www.iubenda.com/privacy-policy/955835', target='_blank') Privacy Policy
+            span If you have any inquire, please feel free to contact us at 
+            a.link(href='mailto:welcome@thundercampaign.com') welcome@thundercampaign.com
+        .pull-right.text-right
+          p
+            a.sponsor(href='http://www.fastforwardadvisors.com/', target='_blank')
+              img.logo(src='static/img/thundercampaign-partner-fastforward-advisors.png')
+            a.sponsor(href='http://www.plasticpanda.com/', target='_blank')
+              img.logo(src='static/img/thundercampaign-partner-plasticpanda.png')
         script.
           (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
     
   .mask-signup
   section#signup
     .container
-      form.pure-form(action='http://thundercampaign.us8.list-manage.com/subscribe/post?u=d99c1755656dbf46edde51bcf&amp;id=14e385202c', method='post', name='mc-embedded-subscribe-form', target='_blank')
+      button.pure-button.pure-button-rounded.close(type='button')
+        i.icon-cancel
+        span close
+      form.pure-form.text-center(action='http://thundercampaign.us8.list-manage.com/subscribe/post?u=d99c1755656dbf46edde51bcf&amp;id=14e385202c', method='post', name='mc-embedded-subscribe-form', target='_blank')
         h1
-          strong Sign up
-          br
-          span for an early invite
+          strong Sign up 
+          | for an early invite
         .spacer-10
 
         input#email(type='email', name='EMAIL', placeholder='E-mail address', required)
         input(type='hidden' name='b_d99c1755656dbf46edde51bcf_14e385202c' tabindex='-1' value='')
-        button.pure-button(type='submit')
+        button.pure-button.pure-button-rounded(type='submit')
           i.icon-paper-plane 
           span Sign up
-        button.pure-button.close(type='button')
-          i.icon-cancel
-          span close
         .spacer-20
+ 
 
-  pre#tsv(style='display:none').
-    Browser Version##Total Market Share
-    Microsoft Internet Explorer gadget##2661
-    Microsoft Internet Explorer gadget##1696
-    Microsoft Internet Explorer gadget##1009
-    Microsoft Internet Explorer intangible##640
-    Microsoft Internet Explorer intangible##355
-    Firefox 12##672
-    Firefox 11##472
-    Firefox 13##216
-    Firefox 3.6##187
-    Firefox 10##2090
-    Firefox 9.0##1065
-    Firefox 8.0##2055
-    Firefox 4.0##3050
-    Firefox 3.0##4036
-    Firefox 3.5##5036
-    Firefox 6.0##5032
-    Firefox 5.0##5031
-    Firefox 7.0##5029
-    Firefox 14##5010
-    Firefox 2.0##5009
-    Safari 5.1##353
-    Chrome 18.0##801
-    Chrome 19.0##773
-    Chrome 17.0##113
-    Chrome 16.0##1045
-    Chrome 14.0##1025
-    Chrome 20.0##1024
-    Chrome 15.0##1018
-    Chrome 12.0##1016
-    Chrome 11.0##1010
-    Chrome 18.0##1026
-    Chrome 13.0##1013
-    Chrome 10.0##1009
-    Safari 5.0##1085
-    Safari 4.1##1012
-    Safari 4.0##1014  
-
-block scripts
-  script(src='http://code.jquery.com/jquery-1.11.1.min.js')
-  script(src='http://code.highcharts.com/highcharts.js')
-  script(src='http://code.highcharts.com/modules/data.js')
-  script(src='http://code.highcharts.com/modules/drilldown.js')
-  script(src='static/js/charts.js')
+//-block scripts
