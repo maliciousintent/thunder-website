@@ -10,6 +10,8 @@ block app
     section.page.page-texture#landing
       .container
         header
+          .pull-left
+            img.logo(src='static/img/thunder-logo-white.png')
           .pull-right
             ul#menu
               li: a(href='#discover') Discover More
@@ -18,28 +20,31 @@ block app
               li: button.pure-button.signup
                 span Signup
 
-          img.logo(src='static/img/thunder-logo-white.png')
         
         #claim.fixed-container.text-center
-          .spacer-100
+          .spacer-100.to-hide-mobile
           h1
             | Successful crowdfunding with 
             strong Big Data
           .spacer-20
           p
-            | Improve your crowdfunding campaign by using our
-            br  
+            | Improve your crowdfunding campaign by using our 
+            br.to-hide-mobile
             strong big data analysis 
             | and stats of thousands of successful campaigns
-          .spacer-40
+          .spacer-20
+          .spacer-20.to-hide-mobile
           p
             button.pure-button.pure-button-rounded.signup
               i.icon-vcard
               span Signup
             | or&nbsp;&nbsp;&nbsp;
             a.link(href='#discover')
-              span See what you get with Thunder Campaign »
-          .spacer-150
+              span See what you get 
+              span.to-hide-mobile with Thunder Campaign 
+              span »
+          .spacer-100
+          .spacer-50.to-hide-mobile
 
     section.page.page-white#dashboard
       .preview.text-center
@@ -54,12 +59,16 @@ block app
             button.pure-button.pure-button-rounded.signup
               i.icon-vcard
               span Signup
-            //-| to get a preview of Thunder Campaign
-            | to keep updated! We will notify you at the launch of the Beta
+            span.spacer-20.to-show-mobile
+            //-span to get a preview of Thunder Campaign
+            span to keep updated! 
+            br.to-show-mobile
+            span We will notify you at the launch of the Beta
 
     section.page.page-white#meet
       .fixed-container
-        .spacer-100
+        .spacer-40
+        .spacer-60.to-hide-mobile
         .text-center
           h1 Meet  
             strong our team
@@ -92,25 +101,26 @@ block app
                 .overlay-text
                   h3 Emanuele Brivio
                   h4 Lead Front-end
-        .spacer-100
+        .spacer-40
+        .spacer-60.to-hide-midsize
   
     section.page.page-white#footer
       .container
         .pull-left
           .spacer-10
           .spacer-5
-          p
-            img.logo(src='static/img/thunder-logo.png')
-            span Copyright 2014 &copy;
-            a.link(href='//www.iubenda.com/privacy-policy/955835', target='_blank') Privacy Policy
-            span &nbsp;&nbsp;&middot;&nbsp;&nbsp;If you have any inquire, please feel free to contact us at 
-            a.link(href='mailto:welcome@thundercampaign.com') welcome@thundercampaign.com
+          img.logo(src='static/img/thunder-logo.png')
         .pull-right.text-right
-          p
             a.sponsor(href='http://www.fastforwardadvisors.com/', target='_blank')
               img.logo(src='static/img/thundercampaign-partner-fastforward-advisors.png')
             a.sponsor(href='http://www.plasticpanda.com/', target='_blank')
               img.logo(src='static/img/thundercampaign-partner-plasticpanda.png')
+        .clear
+        p
+          span Copyright 2014 &copy;
+          a.link(href='//www.iubenda.com/privacy-policy/955835', target='_blank') Privacy Policy
+          span &nbsp;&nbsp;&middot;&nbsp;&nbsp;If you have any inquire, please feel free to contact us at 
+          a.link(href='mailto:welcome@thundercampaign.com') welcome@thundercampaign.com
         script.
           (function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
     

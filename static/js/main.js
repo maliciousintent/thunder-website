@@ -45,14 +45,11 @@
   document.querySelector('section#signup form').addEventListener('submit', hideSignup);
   document.querySelector('.mask-signup').addEventListener('click', hideSignup);
 
-  setTimeout(function () {
-    document.querySelector('#app .image').classList.add('showed');
-    document.querySelector('#app .claim').classList.add('showed');
-  }, 100);
-
 
   var resizeHandler = function () {
     document.querySelector('section#landing').style.height = document.querySelector('body').getBoundingClientRect().height + 'px';
+    var imageH = document.querySelector('.preview img').getBoundingClientRect().height;
+    document.querySelector('.preview').style.height = Math.round(imageH - imageH * 0.283333) + 'px';
   };
 
   window.addEventListener('resize', function () {
