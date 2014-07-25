@@ -57,4 +57,9 @@
   });
   resizeHandler();
 
+  document.addEventListener('scroll', function () {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    document.querySelector('#scrolldown').style.opacity = (200 - scrollTop) / 100;
+  });
+
 })();

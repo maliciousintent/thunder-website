@@ -11,7 +11,7 @@ block app
       .container
         header
           .pull-left
-            img.logo(src='static/img/thunder-logo-white.png')
+            img.logo(src='/static/img/thunder-logo-white.png')
           .pull-right
             ul#menu
               li: a(href='#discover') Discover More
@@ -20,14 +20,22 @@ block app
               li: button.pure-button.signup
                 span Signup
 
+
+        a#scrolldown(href='#discover')
+          span Scroll Down
+          i.icon-down-open-big
+          i.icon-down-open-big
+
         
         #claim.fixed-container.text-center
           .spacer-100.to-hide-mobile
           h1
-            | Successful crowdfunding with 
+            | Successful 
+            strong crowdfunding 
+            | with 
             strong Big Data
           .spacer-20
-          p
+          h2
             | Improve your crowdfunding campaign by using our 
             br.to-hide-mobile
             strong big data analysis 
@@ -49,7 +57,7 @@ block app
     section.page.page-white#dashboard
       .preview.text-center
         #discover &nbsp;
-        img(src='static/img/dashboard-preview-stats.png')
+        img(src='/static/img/dashboard-preview-stats.png')
       .spacer-100
 
     section.page.page-texture#recall
@@ -60,10 +68,11 @@ block app
               i.icon-vcard
               span Signup
             span.spacer-20.to-show-mobile
-            //-span to get a preview of Thunder Campaign
-            span to keep updated! 
-            br.to-show-mobile
-            span We will notify you at the launch of the Beta
+            span to get a preview of Thunder Campaign
+            //-
+              span to keep updated! 
+              br.to-show-mobile
+              span We will notify you at the launch of the Beta
 
     section.page.page-white#meet
       .fixed-container
@@ -74,29 +83,29 @@ block app
             strong our team
           .spacer-40
           .profile
-            .profile-picture(style='background-image: url("static/img/thundercampaign-team-frank-manuel-saviane.png");')
-              img.mask(src='static/img/profile-mask.png')
+            .profile-picture(style='background-image: url("/static/img/thundercampaign-team-frank-manuel-saviane.png");')
+              img.mask(src='/static/img/profile-mask.png')
               .overlay
                 .overlay-text
                   h3 Frank M. Saviane
                   h4 CEO
           .profile
-            .profile-picture(style='background-image: url("static/img/thundercampaign-team-andrea-colognese.png");')
-              img.mask(src='static/img/profile-mask-3.png')
+            .profile-picture(style='background-image: url("/static/img/thundercampaign-team-andrea-colognese.png");')
+              img.mask(src='/static/img/profile-mask-3.png')
               .overlay
                 .overlay-text
                   h3 Andrea Colognese
                   h4 COO
           .profile
-            .profile-picture(style='background-image: url("static/img/thundercampaign-team-mauro-bolis.png");')
-              img.mask(src='static/img/profile-mask.png')
+            .profile-picture(style='background-image: url("/static/img/thundercampaign-team-mauro-bolis.png");')
+              img.mask(src='/static/img/profile-mask.png')
               .overlay
                 .overlay-text
                   h3 Mauro Bolis
                   h4 CTO, Lead Back-end
           .profile
-            .profile-picture(style='background-image: url("static/img/thundercampaign-team-emanuele-brivio.png");')
-              img.mask(src='static/img/profile-mask-3.png')
+            .profile-picture(style='background-image: url("/static/img/thundercampaign-team-emanuele-brivio.png");')
+              img.mask(src='/static/img/profile-mask-3.png')
               .overlay
                 .overlay-text
                   h3 Emanuele Brivio
@@ -109,12 +118,12 @@ block app
         .pull-left
           .spacer-10
           .spacer-5
-          img.logo(src='static/img/thunder-logo.png')
+          img.logo(src='/static/img/thunder-logo.png')
         .pull-right.text-right
             a.sponsor(href='http://www.fastforwardadvisors.com/', target='_blank')
-              img.logo(src='static/img/thundercampaign-partner-fastforward-advisors.png')
+              img.logo(src='/static/img/thundercampaign-partner-fastforward-advisors.png')
             a.sponsor(href='http://www.plasticpanda.com/', target='_blank')
-              img.logo(src='static/img/thundercampaign-partner-plasticpanda.png')
+              img.logo(src='/static/img/thundercampaign-partner-plasticpanda.png')
         .clear
         p
           span Copyright 2014 &copy;

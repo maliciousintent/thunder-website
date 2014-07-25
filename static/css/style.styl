@@ -1,6 +1,4 @@
 @import ('nib')
-@import ('font')
-@import url('//fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700')
 
 
 /* @CUSTOM colors for easy use */
@@ -49,7 +47,6 @@ body
   span
     text-transform uppercase
     font-weight 500
-    font-size 18px
 
   &:hover
     border-color #FFF
@@ -115,14 +112,23 @@ body
   display none
 
 h1
-  font-size 36px
+  font-size 50px
   font-weight 300
-  line-height 48px
+  line-height 54px
+  text-transform uppercase
+  letter-spacing -3px
   strong
-    font-weight 400
+    font-weight 500
+
+h2
+  font-size 26px
+  line-height 36px
+  font-weight 300
+  strong
+    font-weight 500
 
 p
-  font-size 18px
+  font-size 21px
   font-weight 300
   line-height 30px
   strong
@@ -177,7 +183,7 @@ header
       margin-right 40px
       a
         text-transform uppercase
-        font-size 18px
+        font-size 16px
         font-weight 400
         text-decoration none
         color rgba(#FFF, 0.6)
@@ -195,6 +201,35 @@ header
     transform scale(0.9, 0.9)
     .preview
       transform scale(1.05, 1.05)
+
+#scrolldown
+  color #FFF
+  text-align center
+  font-weight 400
+  font-size 12px
+  text-transform uppercase
+  opacity 0.9
+  position absolute
+  z-index 100
+  display block
+  width 160px
+  left 50%
+  bottom 50px
+  transform translate(-50%, 0)
+  height 60px
+  animation scrolldown 3s infinite
+  text-decoration none
+  span,
+  i
+    display block
+    text-align center
+  span
+    margin-bottom 5px
+    margin-top 10px
+  i
+    margin 0
+    &:last-child
+      margin-top -12px
 
 section#landing
   position relative
@@ -227,6 +262,7 @@ section#dashboard
       border-radius 10px
       bottom 0
       box-shadow 0 0 20px rgba(#000, 0.15)
+
 
 .mask-signup
   background rgba(#101010, 0.8)
@@ -416,6 +452,9 @@ section#footer
   .to-show-mobile
     display block
 
+  #scrolldown
+    display none
+
   .page
     &.page-texture
       background-size cover
@@ -434,3 +473,13 @@ section#footer
       left auto
       transform none
 
+@keyframes scrolldown
+  0%
+    transform translate(-50%, 0)
+  50%
+    transform translate(-50%, 20px)
+  100%
+    transform translate(-50%, 0)
+
+
+@import ('font')
