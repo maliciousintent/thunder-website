@@ -56,6 +56,7 @@
     resizeHandler();
   });
   resizeHandler();
+  setTimeout(resizeHandler, 500);
 
   document.addEventListener('scroll', function () {
     var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
