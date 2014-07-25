@@ -46,7 +46,9 @@ block app
             button.pure-button.pure-button-rounded.signup
               i.icon-vcard
               span Signup
-            | or&nbsp;&nbsp;&nbsp;
+            span.spacer-10.to-show-mobile
+            small &nbsp;&nbsp;&nbsp;or&nbsp;&nbsp;&nbsp;
+            span.spacer-10.to-show-mobile
             a.link(href='#discover')
               span See what you get 
               span.to-hide-mobile with Thunder Campaign 
@@ -81,7 +83,7 @@ block app
         .text-center
           h1 Meet  
             strong our team
-          .spacer-40
+          .spacer-40.to-hide-mobile
           .profile
             .profile-picture(style='background-image: url("/static/img/thundercampaign-team-frank-manuel-saviane.png");')
               img.mask(src='/static/img/profile-mask.png')

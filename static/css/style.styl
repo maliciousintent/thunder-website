@@ -62,6 +62,7 @@ body
     color _accent
 
   &.pure-button-rounded
+    padding 0
     border none
     i
       width 44px
@@ -115,7 +116,6 @@ h1
   font-size 50px
   font-weight 300
   line-height 54px
-  text-transform uppercase
   letter-spacing -3px
   strong
     font-weight 500
@@ -171,6 +171,11 @@ a.link
 header
   color #FFF
   clearfix()
+  position absolute
+  z-index 100
+  top 50px
+  left 50px
+  right 50px
   img.logo
     width 284px
     margin-top 7px
@@ -235,7 +240,7 @@ section#landing
   position relative
   width 100%
   overflow hidden
-  min-height 700px !important
+  min-height 800px !important
 
   #claim
     position absolute
@@ -452,6 +457,9 @@ section#footer
   .to-show-mobile
     display block
 
+  .container
+    padding 30px 20px
+
   #scrolldown
     display none
 
@@ -464,6 +472,9 @@ section#footer
   section#landing
     height auto !important
     header
+      top 40px
+      left 20px
+      right 20px
       #menu
         display none
 
@@ -473,13 +484,37 @@ section#footer
       left auto
       transform none
 
+    h1
+      font-size 40px
+      line-height 40px
+    h2
+      font-size 24px
+      line-height 28px
+
+  section#meet
+    .profile
+      .profile-picture
+        width 180px
+        height 180px
+        background-size 180px 180px
+        margin 10px
+        img.mask
+          width 190px
+          height 190px
+        .overlay
+          .overlay-text
+            h3
+              font-size 16px
+            h4
+              font-size 14px
+
 @keyframes scrolldown
   0%
-    transform translate(-50%, 0)
+    bottom 50px
   50%
-    transform translate(-50%, 20px)
+    bottom 30px
   100%
-    transform translate(-50%, 0)
+    bottom 50px
 
 
 @import ('font')
