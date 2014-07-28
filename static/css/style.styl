@@ -369,7 +369,28 @@ section#signup
           margin 0
           text-transform uppercase
           font-weight 500
+    a.social
+      position absolute
+      z-index 15
+      display none
+      bottom 40px
+      left 50%
+      transform translate(-50%, 0)
+      text-decoration none
+      color #FFF
+      width 32px
+      height 32px
+      border-radius 32px
+      line-height 36px
+      margin-top 10px
+      background darken(_accent, 20%)
+      text-align center
+      cursor pointer
+      &:hover
+        background darken(_accent, 50%)
     &:hover
+      a.social
+        display block
       .overlay
         opacity 1
 
@@ -501,6 +522,8 @@ section#footer
         img.mask
           width 190px
           height 190px
+        a.social
+          bottom 20px
         .overlay
           .overlay-text
             h3
